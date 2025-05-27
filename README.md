@@ -1,24 +1,14 @@
 # **🌦️ Weather App (Open-Meteo API)**
 
 ## Project Overview
-This Weather App allows users to check the current weather for any city. It uses the Open-Meteo Geocoding API to find location coordinates and then fetches weather data using the Open-Meteo Weather Forecast API.
+This Weather App allows users to check the current weather for any city. It uses the Open-Meteo Geocoding API to find location coordinates and then fetches weather data using the Open-Meteo Weather Forecast API. This is a Java application with a modern Swing GUI. 
 
-A **Java desktop application** with a modern Swing GUI that fetches and displays the current temperature (in Celsius) and weather description for any city using the [Open-Meteo API](https://open-meteo.com/).  
-The app features robust error handling, supports Unicode city names, allows for simulated API failures, and logs responses to a file for easy debugging.
+## App Features
 
-
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
-
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- Search bar to enter a city name
+- Display of temperature, wind speed, weather description, humidity, wind, precipitation
+- Error message if city is not found/ empty field/ numbers only
+- Supports only city searches not country searches
 
 ## Dependency Management
 
