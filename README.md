@@ -13,6 +13,24 @@ This Weather App allows users to check the current weather for any city. It uses
 - Error message if city is not found/ empty field/ numbers only
 - Supports only city searches not country searches
 
-## Dependency Management
+## ⚙️ Installation Instructions
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. **Clone or Download the Repository**
+
+2. **Requirements**
+   - Java 11 or higher
+   - [org.json](https://github.com/stleary/JSON) library (e.g., `json-20240303.jar`)
+
+3. **Compile**
+   ```sh
+   javac -cp ".;json-20240303.jar" WeatherApp.java
+   ```
+   *(On Mac/Linux, use `:` instead of `;` in the classpath)*
+
+4. **Run**
+   ```sh
+   java -cp ".;json-20240303.jar" WeatherApp
+   ```
+
+---
+
