@@ -34,17 +34,20 @@ This Weather App allows users to check the current weather for any city. It uses
    ```sh
    java -cp ".;gson-2.13.1.jar" WeatherApp
    
-   to run the test cases: java -jar .\junit-platform-console-standalone-1.9.3.jar --class-path ".;gson-2.13.1.jar" --scan-class-path
+   java -jar .\junit-platform-console-standalone-1.9.3.jar --class-path ".;gson-2.13.1.jar" --scan-class-path (for testing)
    ```
 ## 🚀 Usage Guide
 
 1. **Launch** the application.
-2. **Enter a city name** (e.g., `London`, `New York`, `北京市`) in the text field.
+2. **Enter a city name** (e.g., `London`, `New York`) in the text field.
 3. **Click** the **Get Weather** button.
 4. **View the results** in the output area:
     - City name
     - Temperature in Celsius
     - Weather description
+    - Humidity
+    - Wind Speed
+    - Precipitation
 
 ---
 
@@ -53,16 +56,17 @@ This Weather App allows users to check the current weather for any city. It uses
 **Successful Query:**
 ```
 {
-  "city": "London",
-  "temperature_celsius": 17.2,
-  "weather_description": "Mainly clear"
+  London
+  Overcast
+  🌡️ Temperature: 15.8 °C
+  💨 Wind: 18.6 km/h
 }
 ```
 
 **Invalid City:**
 ```
 {
-  "error": "City \"Qwertyuiop\" not found."
+  ❗ City "Qwertyuiop" not found.
 }
 ```
 
@@ -129,12 +133,10 @@ Gson (Apache-2.0 License) is used
 - Gson library- Widely used, business-friendly
   - License: The Gson License (http://www.apache.org/licenses/LICENSE-2.0)
 
-
 ---
 
 ## 🙏 Acknowledgements
 
 - [Open-Meteo](https://open-meteo.com/) for free weather and geocoding APIs
-- [org.json](https://github.com/stleary/JSON) for JSON parsing in Java
-
+- The Gson License (http://www.apache.org/licenses/LICENSE-2.0) for using Gson
 ---
