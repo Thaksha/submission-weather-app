@@ -1,4 +1,4 @@
-#****🌦️ Weather App (Open-Meteo API)**#
+#**🌦️ Weather App (Open-Meteo API)**
 
 🌤️ Simple Weather App**
 
