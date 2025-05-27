@@ -15,7 +15,7 @@ This Weather App allows users to check the current weather for any city. It uses
 
 ## ⚙️ Installation Instructions
 
-1. **Clone or Download the Repository**
+1. **Clone or Download the Repository**  
    git clone https://github.com/Thaksha/submission-weather-app.git
 2. **Requirements**
    - Java 11 or higher
