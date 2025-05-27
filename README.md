@@ -12,7 +12,9 @@ This Weather App allows users to check the current weather for any city. It uses
 - Display of temperature, wind speed, weather description, humidity, wind, precipitation
 - Error message if city is not found/ empty field/ numbers only
 - Supports only city searches not country searches
-- Checked the code for privacy concerns
+- Checked the code for privacy concerns and license conflicts
+- Mobile Friendliness (Small Screens)
+- To validate the code in the WeatherApp, created a separate test class called WeatherAppTest.java that calls my static method getWeatherForCity(String cityName) and checks its output. Since, it's   not a good practice to add test cases inside my Swing GUI app, I kept my tests separate for clarity and maintainability. (JUnit test classes: Run with the JUnit test runner)
 
 ## ⚙️ Installation Instructions
 
@@ -25,13 +27,14 @@ This Weather App allows users to check the current weather for any city. It uses
 
 3. **Compile**
    ```sh
-   javac -cp ".;json-20240303.jar" WeatherApp.java
+   javac -cp gson-2.13.1.jar WeatherApp.java 
    ```
-   *(On Mac/Linux, use `:` instead of `;` in the classpath)*
-
+  
 4. **Run**
    ```sh
-   java -cp ".;json-20240303.jar" WeatherApp
+   java -cp ".;gson-2.13.1.jar" WeatherApp
+   
+   to run the test cases: java -jar .\junit-platform-console-standalone-1.9.3.jar --class-path ".;gson-2.13.1.jar" --scan-class-path
    ```
 ## 🚀 Usage Guide
 
@@ -82,11 +85,13 @@ This Weather App allows users to check the current weather for any city. It uses
 ## ⚠️ Error Handling
 
 - **Empty Input:** Prompts user to enter a city name.
-- **Invalid City:** Displays an error if the city is not found.
+- **Numeric Input:** Shows: “Please enter a valid city name (not a number).”
+- **Country Name Input:** Shows: “Please enter a city, not a country name.”
+- **City Not Found (API returns no results):** Shows: “City "X" not found.”
 - **Network/API Errors:** Friendly error messages if the API is down or unreachable.
 - **Malformed/Unavailable Data:** Handles unexpected API responses gracefully.
 - **Simulated API Failures:** Enter `"simulate_api_failure"`, `"simulate_weather_api_failure"`, or `"simulate_malformed_response"` as the city name to trigger test error cases.
-
+  
 ---
 
 ## 🌐 API Information
@@ -106,7 +111,7 @@ This Weather App allows users to check the current weather for any city. It uses
 
 - [ ] Add weather forecast (multi-day)
 - [ ] Allow switching temperature units (C/F)
-- [ ] Show weather icons/graphics
+- [ ] Show colourful weather icons/graphics
 - [ ] Add search history and offline cache
 - [ ] Enhance logging (user actions, error details)
 - [ ] Localization/multi-language support
@@ -117,11 +122,12 @@ This Weather App allows users to check the current weather for any city. It uses
 
 ## 📄 License
 
-MIT (or your chosen license)
+Gson (Apache-2.0 License) is used
+
 ## Third-party Libraries
 
-- org.json (https://github.com/stleary/JSON)
-  - License: The JSON License (https://github.com/stleary/JSON/blob/master/LICENSE)
+- Gson library- Widely used, business-friendly
+  - License: The Gson License (http://www.apache.org/licenses/LICENSE-2.0)
 
 
 ---
