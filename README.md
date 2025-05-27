@@ -1,6 +1,7 @@
 # **🌦️ Weather App (Open-Meteo API)**
 
-🌤️ Simple Weather App**
+## Project Overview
+This Weather App allows users to check the current weather for any city. It uses the Open-Meteo Geocoding API to find location coordinates and then fetches weather data using the Open-Meteo Weather Forecast API.
 
 A **Java desktop application** with a modern Swing GUI that fetches and displays the current temperature (in Celsius) and weather description for any city using the [Open-Meteo API](https://open-meteo.com/).  
 The app features robust error handling, supports Unicode city names, allows for simulated API failures, and logs responses to a file for easy debugging.
